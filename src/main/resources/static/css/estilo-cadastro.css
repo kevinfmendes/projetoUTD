@@ -1,0 +1,76 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e283d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #28415d;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  color: #1e283d;
+}
+
+#botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button.button,
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e88e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+a.button {
+  background-color: #e53935; /* Cor de fundo vermelha para o botão "Cancelar" */
+}
+
+button.button:hover,
+a.button:hover {
+  background-color: #1976d2;
+}
+
+#botoes > * {
+  margin-right: 10px; /* Adiciona espaçamento entre os botões */
+}
+
+#botoes > *:last-child {
+  margin-right: 0; /* Remove o espaçamento do último botão */
+}
+
+

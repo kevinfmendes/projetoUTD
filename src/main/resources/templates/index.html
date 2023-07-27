@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Livraria UTD</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+	<link href="/css/estilo.css" rel="stylesheet" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Livraria Mais Conhecimento</h1>
+			<a href="novo" class="button blue">Cadastrar novo livro</a>
+		</header>
+		<main>
+			<table id="keywords" cellspacing="0" cellpadding="0">
+				<thead>
+					<tr>
+						<th><span>Id</span></th>
+						<th><span>Nome</span></th>
+						<th><span>Autor</span></th>
+						<th><span>Quantidade</span></th>
+						<th><span>Preço</span></th>
+						<th><span>Ações</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="livro: ${livros}">
+						<td th:text="${livro.id}">Id</td>
+						<td class="lalign" th:text="${livro.nome}">Nome</td>
+						<td class="lalign" th:text="${livro.autor}">Autor</td>
+						<td th:text="${livro.quantidade}">Quantidade</td>
+						<td th:text="${livro.preco}">Preço</td>
+						<td>
+							<a th:href="@{'/editar/'+${livro.id}}" class="button green"><span><i class="fa fa-edit"></i></span></a>
+							<a th:href="@{'/deletar/'+${livro.id}}" class="button red" id="deletebutton" onclick="confirmDelete(event)"><span><i class="fa fa-trash"></i></span></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<footer>
+			Desenvolvido por Kevin Mendes &copy; 2023
+		</footer>
+	</div>
+	<script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>

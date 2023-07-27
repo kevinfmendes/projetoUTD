@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cadastro livro</title>
+<!-- Custom styles for this template -->
+<link href="/css/estilo-cadastro.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+	<form action="#" th:action="@{/salvar}" th:object="${livro}" method="post">
+		<h1>Cadastrar novo livro</h1>
+			<label> Título: </label><br> <input id="titulo"type="text" th:field="*{nome}" placeholder=""/><br> 
+			<label> Autor:</label> </br> <input id="autor" type="text" th:field="*{autor}" placeholder="" /><br>
+			<label> Quantidade: </label> </br> <input id="quantidade" type="text" th:field="*{quantidade}" placeholder="" /> <br>
+			<label> Preço: </label> </ br> <input id="preco" type="text" th:field="*{preco}" placeholder="" />
+		<br>
+		<div id="botoes">
+		<button class="button" type="submit">Cadastrar</button>
+		<a href="/" class="button">Cancelar</a>
+		</div>
+	</form>
+	<script type="text/javascript" src="/js/cadastrar-livro.js"></script>
+</body>
+</html>
